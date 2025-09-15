@@ -27,36 +27,7 @@ Admin metrics: total answers, avg score, per-skill averages
 
 Front-end UX: shows Expected vs Detected type + disables submit on mismatch
 
-Monorepo Layout
-excel-mock-interviewer-advanced/
-├── backend/
-│   ├── app/
-│   │   ├── main.py                  # FastAPI app (routes, type-guard, eval flow)
-│   │   ├── services/
-│   │   │   ├── state.py             # Interview state, hints, adaptivity, penalties
-│   │   │   ├── report.py            # Summary report (bands, skills, drills)
-│   │   │   └── llm.py               # Optional LLM grading (text only)
-│   │   ├── grading/
-│   │   │   ├── formula_rules.py     # Formula checks (SUMIFS, XLOOKUP, INDEX/MATCH)
-│   │   │   └── pandas_eval.py       # Value/table evaluation via pandas
-│   │   ├── questions/
-│   │   │   └── bank.py              # Question bank
-│   │   └── db/
-│   │       ├── __init__.py
-│   │       └── models.py            # Interview, Answer
-│   ├── requirements.txt
-│   └── README.md (optional)
-│
-├── frontend/
-│   ├── pages/
-│   │   └── index.tsx                # UI with Expected/Detected type, hints & logs
-│   ├── lib/api.ts                   # API client (hardened fetch)
-│   ├── package.json                 # Next.js 14
-│   ├── next.config.js               # (supports static export if you choose)
-│   └── tsconfig.json
-│
-├── render.yaml                      # (optional) Render blueprint
-└── README.md                        # ← You are here
+
 
 Tech Stack & Rationale
 
