@@ -211,15 +211,7 @@ Agent: Interview complete. Band: Intermediate.
 Summary: Aggregation 80% | Lookups 100% | Efficiency 40%
 Drills: Practice more on: Efficiency
 
-❓Troubleshooting
 
-Frontend says “Failed to fetch” → check backend URL in NEXT_PUBLIC_API_BASE, backend running/healthy, and CORS.
-
-Git push blocked (large files) → don’t commit .next/, node_modules/, .venv/, data.db (use .gitignore).
-
-Git push blocked (secrets) → remove keys from history, rotate key, push again.
-
-Render start command wrong → use uvicorn app.main:app --host 0.0.0.0 --port $PORT.
 
 License
 
