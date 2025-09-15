@@ -1,0 +1,45 @@
+Fresh interview: paste exactly this order (type-perfect)
+
+formula
+
+=SUMIFS(D:D,A:A,"East",C:C,"Pencil")
+
+
+number
+
+56
+
+
+formula (lookup)
+(Ab accept hona chahiye; dono me se koi ek)
+
+=XLOOKUP(1,(B:B="Kivell")*(C:C="Binder"),E:E)
+
+
+or
+
+=INDEX(E:E, MATCH(1,(B:B="Kivell")*(C:C="Binder"),0))
+
+
+number
+
+19.99
+
+
+table (JSON)
+
+[
+  {"Region":"East","Sales":1805.44},
+  {"Region":"West","Sales":958.93},
+  {"Region":"Central","Sales":789.46}
+]
+
+
+text (2–3 lines)
+
+Use absolute refs ($A$2) when a cell/row/column must stay fixed while filling a formula.
+Use table/structured refs (e.g., Table1[Units]) for readable formulas that auto-expand with the table.
+
+(Agar extra hard follow-up aaye:)
+
+=SUMIFS(D:D,A:A,"East",C:C,"Pencil",B:B,"Jones")

@@ -1,0 +1,1 @@
+{"name":"excel-mock-interviewer-frontend","version":"0.2.0","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start"},"dependencies":{"next":"14.2.4","react":"18.2.0","react-dom":"18.2.0"},"devDependencies":{"@types/node":"24.3.3","@types/react":"19.1.13","typescript":"5.9.2"}}

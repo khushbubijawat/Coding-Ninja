@@ -1,0 +1,26 @@
+# --- Frontend (both layouts) ---
+frontend/node_modules/
+frontend/.next/
+excel-mock-interviewer-advanced/frontend/node_modules/
+excel-mock-interviewer-advanced/frontend/.next/
+frontend/.env.local
+excel-mock-interviewer-advanced/frontend/.env.local
+frontend/.vercel/
+excel-mock-interviewer-advanced/frontend/.vercel/
+
+# --- Backend (both layouts) ---
+backend/.venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/data.db
+excel-mock-interviewer-advanced/backend/.venv/
+excel-mock-interviewer-advanced/backend/__pycache__/
+excel-mock-interviewer-advanced/backend/*.pyc
+excel-mock-interviewer-advanced/backend/.env
+excel-mock-interviewer-advanced/backend/data.db
+
+# --- OS/Editor ---
+.DS_Store
+Thumbs.db
+*.log

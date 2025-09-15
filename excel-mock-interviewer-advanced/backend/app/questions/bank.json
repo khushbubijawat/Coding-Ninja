@@ -1,0 +1,75 @@
+{
+  "version": "0.2",
+  "questions": [
+    {
+      "id": "q_sumifs_east_pencil",
+      "skill": "Aggregation",
+      "difficulty": "M",
+      "kind": "formula",
+      "max_score": 5,
+      "prompt": "Total Units where Region='East' and Item='Pencil'. Return ONLY the Excel formula (e.g., =SUMIFS(...)).",
+      "hint": "Use SUMIFS with two criteria: Region and Item."
+    },
+    {
+      "id": "q_sum_value_check",
+      "skill": "Aggregation",
+      "difficulty": "M",
+      "kind": "value",
+      "eval_key": "total_units_east_pencil",
+      "max_score": 5,
+      "prompt": "Enter the numeric total Units where Region='East' and Item='Pencil' (use the provided data)."
+    },
+    {
+      "id": "q_lookup_rep_item_price",
+      "skill": "Lookups",
+      "difficulty": "M",
+      "kind": "formula",
+      "max_score": 5,
+      "prompt": "What is the UnitPrice for Item='Binder' sold by Rep='Kivell'? Return ONLY the formula (XLOOKUP or INDEX/MATCH).",
+      "hint": "You need two conditions (Rep and Item)."
+    },
+    {
+      "id": "q_lookup_value_check",
+      "skill": "Lookups",
+      "difficulty": "M",
+      "kind": "value",
+      "eval_key": "unitprice_rep_item",
+      "max_score": 5,
+      "prompt": "Enter the UnitPrice for Binder sold by Kivell (numeric value)."
+    },
+    {
+      "id": "q_pivot_table",
+      "skill": "PivotThinking",
+      "difficulty": "M",
+      "kind": "table",
+      "eval_key": "region_total_sales_desc",
+      "max_score": 5,
+      "prompt": "Return a table (JSON) with columns ['Region','Sales'] showing total Sales (Units*UnitPrice) per Region, sorted desc."
+    },
+    {
+      "id": "q_efficiency_text",
+      "skill": "Efficiency",
+      "difficulty": "E",
+      "kind": "text",
+      "max_score": 5,
+      "prompt": "Briefly explain when to use absolute references ($) and table references in Excel (2-3 lines).",
+      "rubric": [
+        "Mentions fixing rows/columns with $ for copy-fill stability",
+        "Explains table structured references for readability/robustness",
+        "Gives a concrete example or scenario"
+      ]
+    },
+    {
+      "id": "q_sumifs_three_criteria",
+      "skill": "Aggregation",
+      "difficulty": "H",
+      "kind": "formula",
+      "max_score": 5,
+      "prompt": "Using three criteria (Region='East', Item='Pencil', Rep='Jones'), return ONLY the Excel formula to sum Units.",
+      "hint": "Use SUMIFS with three criteria.",
+      "accepted_patterns": [
+        "=\\s*SUMIFS\\("
+      ]
+    }
+  ]
+}
