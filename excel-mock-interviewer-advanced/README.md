@@ -47,7 +47,7 @@ Backend → Render (Web Service)
 
 Frontend → Vercel/Netlify (or Render Static Site)
 
-⚙️ Environment Variables
+ Environment Variables
 
 Backend (excel-mock-interviewer-advanced/backend/.env)
 
@@ -87,7 +87,7 @@ npm install
 npm run dev
 # UI: http://localhost:3000
 
-🔌 API Endpoints (Backend)
+ API Endpoints (Backend)
 
 GET /health → simple health JSON
 
@@ -113,7 +113,7 @@ GET /report/{interview_id} → final summary (band, per-skill, strengths, gaps, 
 
 GET /admin/metrics → admin stats (totals, averages, per-skill)
 
-🧠 Scoring & Adaptivity
+Scoring & Adaptivity
 
 Type-Guard: if you submit a wrong type, you don’t advance and get a gentle reminder.
 
@@ -138,7 +138,7 @@ curl -s -X POST http://127.0.0.1:8000/answer \
   -H "Content-Type: application/json" \
   -d '{"interview_id":"<from start>","question_id":"<qid>","answer_text":"=SUMIFS(D:D,A:A,\"East\",C:C,\"Pencil\")"}'
 
-🧑‍💻 Frontend UX Tips
+ Frontend UX Tips
 
 Under each prompt you’ll see: Expected: (formula/value/table/text) and a Detected badge that updates as you type.
 
