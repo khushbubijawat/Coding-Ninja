@@ -3,7 +3,7 @@ It asks 6 questions across skills (Aggregation, Lookups, Efficiency, etc.), eval
 
 Built as a hybrid Product/Engineering solution: deterministic grading for formulas/tables, LLM-assisted grading for short text, and robust agentic state management for a realistic interview.
 
-✨ Features
+Features
 
 Structured flow: intro → questions (with hints) → summary
 
@@ -27,7 +27,7 @@ Admin metrics: total answers, avg score, per-skill averages
 
 Front-end UX: shows Expected vs Detected type + disables submit on mismatch
 
-🧭 Monorepo Layout
+Monorepo Layout
 excel-mock-interviewer-advanced/
 ├── backend/
 │   ├── app/
@@ -58,7 +58,7 @@ excel-mock-interviewer-advanced/
 ├── render.yaml                      # (optional) Render blueprint
 └── README.md                        # ← You are here
 
-🧰 Tech Stack & Rationale
+Tech Stack & Rationale
 
 Backend: FastAPI (simple, fast, great DX)
 
@@ -97,7 +97,7 @@ Frontend (excel-mock-interviewer-advanced/frontend/.env.local)
 # Point the UI to your backend
 NEXT_PUBLIC_API_BASE=http://127.0.0.1:8000
 
-🚀 Local Development
+ Local Development
 1) Backend
 cd excel-mock-interviewer-advanced/backend
 python -m venv .venv
@@ -158,7 +158,7 @@ else → Medium
 
 LLM grading (text): used only for short text questions. If OPENAI_API_KEY is absent, a rule-based fallback runs.
 
-🧪 Quick Test (Curl)
+Quick Test (Curl)
 # Start
 curl -s -X POST http://127.0.0.1:8000/start -H "Content-Type: application/json" -d "{}"
 
@@ -175,7 +175,7 @@ Submit is disabled until your input matches the expected format.
 
 Placeholders show valid examples (e.g., a sample formula or table JSON).
 
-🌐 Deployment
+ Deployment
 Backend (Render)
 
 Root directory: excel-mock-interviewer-advanced/backend
@@ -207,7 +207,7 @@ For SSR on Render, create a Node Web Service and run next start -p $PORT.
 
 Keep frontend & backend in separate services. It simplifies environment variables and scaling.
 
-🔒 Security
+Security
 
 Never commit secrets (.env, API keys).
 
@@ -225,7 +225,7 @@ Keep deterministic checks for formulas/tables; expand rubric prompts for text.
 
 Add telemetry (e.g., hardest skills per cohort) to drive new drills.
 
-🧾 Sample Transcript (excerpt)
+Sample Transcript (excerpt)
 Agent: Hi! 6 questions in ~12 mins.
 Q1 (Aggregation): East + Pencil total — Expected: formula
 You: =SUMIFS(D:D,A:A,"East",C:C,"Pencil")
@@ -250,7 +250,7 @@ Git push blocked (secrets) → remove keys from history, rotate key, push again.
 
 Render start command wrong → use uvicorn app.main:app --host 0.0.0.0 --port $PORT.
 
-📜 License
+License
 
 MIT — use, modify, and build on it.
 Please keep attribution if you publish derivatives or demos.
